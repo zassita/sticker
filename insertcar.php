@@ -6,7 +6,7 @@
 	Name:  
 	<input type="text" name="name"
 	class="form-control"><br>
-	Phone No: 
+	Phone No.: 
 	<input type="text" name="phoneno"
 	class="form-control"><br>
 	Gender:
