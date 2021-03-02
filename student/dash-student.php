@@ -1,6 +1,6 @@
 <?php session_start();
 //connect to db
-include("dbconnect.php");
+include("../dbconnect.php");
 
 $matricno = $_SESSION['matric'];
 // get student request list
@@ -13,7 +13,7 @@ if (mysqli_error($conn)) {
 
 // include "checksession1.php";
 //dash-admin.php
-include("header.php");
+include("include/header.php");
 // success handling for searchbox
 if (isset($_GET['success'])) {
     if ($_GET['success'] == "Successequest") {
@@ -34,7 +34,7 @@ if (isset($_GET['success'])) {
             <div class="d-sm-flex align-items-center justify-content-between mb-1">
                 <h5 class="m-0  font-weight-bold text-primary">Request Record</h5>
                 <div class="pull-right">
-                    <a href="insertcar.php" class="btn btn-primary btn-icon-split">
+                    <a href="requestform.php" class="btn btn-primary btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
@@ -83,5 +83,5 @@ if (isset($_GET['success'])) {
     </div>
 </div>
 <?php
-include("footer.php");
+include("include/footer.php");
 ?>

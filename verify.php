@@ -26,15 +26,10 @@ if(mysqli_num_rows($rs)==1){//jumpa user
 	$_SESSION['program']=$record['program'];
 	$_SESSION['fakulti']=$record['fakulti'];
 
-	header("Location: dash-student.php?msg=Login failed");
+	header("Location: student/dash-student.php");
 
-	//admin image file
-
-	echo "1 user found";
-	echo "Admin name ".$record['name'];
 }else{
 	//redirect login.php
 	header ("Location: login.php?msg=Login failed");
-	echo "Matric & password not match";
 }
 ?>
