@@ -17,7 +17,7 @@ if (isset($_GET['msg'])) {
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Student Login - Login</title>
+	<title>Admin Login - Login</title>
 
 	<!-- Custom fonts for this template-->
 	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,14 +45,14 @@ if (isset($_GET['msg'])) {
 							<div class="col-lg-6">
 								<div class="p-5">
 									<div class="text-center">
-										<h1 class="h4 text-gray-900 mb-4">Vehicle Sticker Application for KUIS Student!</h1>
+										<h1 class="h4 text-gray-900 mb-4">Vehicle Sticker Application for KUIS Student</h1>
 									</div>
-									<form class="user" action="verify.php" method="POST">
+									<form class="admin" action="verifyadmin.php" method="POST">
 										<div class="form-group">
-											Matric Number<input type="text" class="form-control form-control-user" id="matric" name="matric" placeholder="Enter Your matric number">
+											<input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Enter Your Email">
 										</div>
 										<div class="form-group">
-											Password<input type="password" class="form-control form-control-user" id="exampleInputPassword" name="katalaluan" placeholder="Password">
+											<input type="password" class="form-control form-control-user" id="exampleInputPassword" name="katalaluan" placeholder="Password">
 										</div>
 										<div class="form-group">
 											<div class="custom-control custom-checkbox small">
@@ -62,15 +62,8 @@ if (isset($_GET['msg'])) {
 											</div>
 										</div>
 										<input class="btn btn-primary btn-user btn-block" value="Login" type="submit">
-
 									</form>
 									<hr>
-									<div class="text-center">
-										<a class="small" href="forgot-password.html">Forgot Password?</a>
-									</div>
-									<div class="text-center">
-										<a class="small" href="register.php">Create an Account!</a>
-									</div>
 								</div>
 							</div>
 						</div>

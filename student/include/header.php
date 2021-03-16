@@ -32,7 +32,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
 
-        <div class="sidebar-brand-text mx-3">Vehicle Sticker</sup></div>
+        <div class="sidebar-brand-text mx-3">Vehicle Sticker Application</sup></div>
       </a>
 
       <!-- Divider -->
@@ -42,19 +42,19 @@
       <li class="nav-item">
         <a class="nav-link" href="dash-student.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Home</span></a>
       </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
       <!-- Heading -->
-      <div class="sidebar-heading">
+      <!--<div class="sidebar-heading">
         Interface
-      </div>
+      </div>-->
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <!--<li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
           <span>Components</span>
@@ -66,10 +66,10 @@
             <a class="collapse-item" href="cards.html">Cards</a>
           </div>
         </div>
-      </li>
+      </li>-->
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
+      <!--<li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Utilities</span>
@@ -83,7 +83,7 @@
             <a class="collapse-item" href="utilities-other.html">Other</a>
           </div>
         </div>
-      </li>
+      </li>-->
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -111,7 +111,7 @@
           </button>
 
           <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+          <!--<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
@@ -120,7 +120,7 @@
                 </button>
               </div>
             </div>
-          </form>
+          </form>-->
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">

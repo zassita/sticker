@@ -32,7 +32,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
 
-        <div class="sidebar-brand-text mx-3">Vehicle Sticker</sup></div>
+        <div class="sidebar-brand-text mx-3">Vehicle Sticker Application</sup></div>
       </a>
 
       <!-- Divider -->
@@ -42,7 +42,7 @@
       <li class="nav-item">
         <a class="nav-link" href="dash-admin.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Home</span></a>
       </li>
 
       <!-- Divider -->
@@ -62,14 +62,14 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            <a class="collapse-item" href="listapprove.php">Approved List</a>
+            <a class="collapse-item" href="listreject.php">Rejected List</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
+      <!--<li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Utilities</span>
@@ -83,7 +83,7 @@
             <a class="collapse-item" href="utilities-other.html">Other</a>
           </div>
         </div>
-      </li>
+      </li>-->
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -111,7 +111,7 @@
           </button>
 
           <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+          <!--<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
@@ -120,7 +120,7 @@
                 </button>
               </div>
             </div>
-          </form>
+          </form>-->
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -152,8 +152,8 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                   <?php
-                    if ($_SESSION['fullname'] !=NULL) {
-                       echo $_SESSION['fullname'];
+                    if ($_SESSION['email'] !=NULL) {
+                       echo $_SESSION['email'];
                     }else {
                       echo ' User name not found';
                     }

@@ -22,7 +22,7 @@ include("include/header.php");
                             <input type="text" class="form-control" id="name" name="name" placeholder="Your name" value="<?php echo $_SESSION['fullname']; ?>" readonly>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Phone">Phone</label>
+                            <label for="Phone">Phone Number</label>
                             <input type="text" class="form-control" id="Phone" name="phoneno" placeholder="Your Phone Number" value="<?php echo $_SESSION['phone']; ?>" readonly>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ include("include/header.php");
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <label for="programme">Program</label>
+                            <label for="programme">Programme</label>
                             <input type="text" class="form-control" id="programme" name="programme" placeholder="Your name" value="<?php echo $_SESSION['program']; ?>" readonly>
                         </div>
                     </div>
@@ -48,6 +48,17 @@ include("include/header.php");
                             <input type="text" class="form-control" id="address" name="address" placeholder="Your Address" value="<?php echo $_SESSION['address']; ?>" readonly>
                         </div>
                     </div>
+                     <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="finalyear">Final Year</label><br>
+                            <input type="radio" class="" id="finalyear" name="final year" required>Yes
+                            <input type="radio" class="" id="finalyear" name="final year" required>No
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                            <label for="file_reasonletter">Upload Reason Letter</label>
+                            <input type="file" class="form-control-file" id="file_reasonletter" name="file_reasonletter">
+                        </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="licenseclass">Driving License Class</label>
@@ -60,7 +71,7 @@ include("include/header.php");
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="carbrand">Car Brand</label>
+                            <label for="carbrand">Vehicle Brand</label>
                             <input type="text" class="form-control" id="carbrand" name="carbrand" required>
                         </div>
                         <div class="form-group col-md-6">

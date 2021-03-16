@@ -2,7 +2,7 @@
 if (isset($_POST['btn_submit'])) {
 
     //connect to db
-    include("../dbconnect.php");
+    include("dbconnect.php");
 
     $name = $_POST['name'];
     $phoneno = $_POST['phoneno'];
@@ -10,7 +10,6 @@ if (isset($_POST['btn_submit'])) {
     $faculty = $_POST['faculty'];
     $matricno = $_POST['matricno'];
     $address = $_POST['address'];
-    $finalyear = $_POST['finalyear'];
     $drivinglicenseclass = $_POST['licenseclass'];
     $roadtaxenddate = $_POST['roadtax'];
     $carbrand = $_POST['carbrand'];
@@ -22,7 +21,7 @@ if (isset($_POST['btn_submit'])) {
     if (isset($_FILES['file_licence'])) {
         if ($_FILES['file_licence']['type'] == "application/pdf") {
             $source_file = $_FILES['file_licence']['tmp_name'];
-            $file_licence_location = "../file/" . $matricno .'-'. $_FILES['file_licence']['name'];
+            $file_licence_location = "file/" . $_FILES['file_licence']['name'];
 
             if (file_exists($file_licence_location)) {
                 print "The file name already exists!!";
@@ -52,7 +51,7 @@ if (isset($_POST['btn_submit'])) {
     if (isset($_FILES['file_matric'])) {
         if ($_FILES['file_matric']['type'] == "application/pdf") {
             $source_file = $_FILES['file_matric']['tmp_name'];
-            $file_matric_location = "../file/" . $matricno .'-'. $_FILES['file_matric']['name'];
+            $file_matric_location = "file/" . $_FILES['file_matric']['name'];
 
             if (file_exists($file_matric_location)) {
                 print "The file name already exists!!";
@@ -82,7 +81,7 @@ if (isset($_POST['btn_submit'])) {
     if (isset($_FILES['file_vehiclegrant'])) {
         if ($_FILES['file_vehiclegrant']['type'] == "application/pdf") {
             $source_file = $_FILES['file_vehiclegrant']['tmp_name'];
-            $file_vehiclegrant_location = "../file/" . $matricno .'-'. $_FILES['file_vehiclegrant']['name'];
+            $file_vehiclegrant_location = "file/" . $_FILES['file_vehiclegrant']['name'];
 
             if (file_exists($file_vehiclegrant_location)) {
                 print "The file name already exists!!";
@@ -112,7 +111,7 @@ if (isset($_POST['btn_submit'])) {
     if (isset($_FILES['file_permisionletter'])) {
         if ($_FILES['file_permisionletter']['type'] == "application/pdf") {
             $source_file = $_FILES['file_permisionletter']['tmp_name'];
-            $file_permisionletter_location = "../file/" . $matricno .'-'. $_FILES['file_permisionletter']['name'];
+            $file_permisionletter_location = "file/" . $_FILES['file_permisionletter']['name'];
 
             if (file_exists($file_permisionletter_location)) {
                 print "The file name already exists!!";
