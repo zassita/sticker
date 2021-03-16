@@ -13,11 +13,11 @@
   <title>Vehicle Sticker Application</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -40,7 +40,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="dash-admin.php">
+        <a class="nav-link" href="dash-student.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Home</span></a>
       </li>
@@ -49,12 +49,12 @@
       <hr class="sidebar-divider">
 
       <!-- Heading -->
-      <div class="sidebar-heading">
+      <!--<div class="sidebar-heading">
         Interface
-      </div>
+      </div>-->
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <!--<li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
           <span>Components</span>
@@ -62,11 +62,11 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="listapprove.php">Approved List</a>
-            <a class="collapse-item" href="listreject.php">Rejected List</a>
+            <a class="collapse-item" href="buttons.html">Buttons</a>
+            <a class="collapse-item" href="cards.html">Cards</a>
           </div>
         </div>
-      </li>
+      </li>-->
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <!--<li class="nav-item">
@@ -145,7 +145,6 @@
               </div>
             </li>
 
-            <div>dsfsd</div>
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
@@ -153,8 +152,8 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                   <?php
-                    if ($_SESSION['email'] !=NULL) {
-                       echo $_SESSION['email'];
+                    if ($_SESSION['fullname'] !=NULL) {
+                       echo $_SESSION['fullname'];
                     }else {
                       echo ' User name not found';
                     }

@@ -61,7 +61,7 @@ if (isset($_POST['btn_submit'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Register</title>
+    <title>Student Registration - Register</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -84,43 +84,47 @@ if (isset($_POST['btn_submit'])) {
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Registration</h1>
                             </div>
                             <form class="user" action="register.php" method="POST">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control" id="student_name" name="student_name" placeholder="Full name" required>
+                                    Name: <input type="text" class="form-control form-control" id="student_name" name="student_name" placeholder="Full name" required>
                                 </div>
 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control" id="matric" name="matric" placeholder="Matric Number" required>
+                                        Matric Number: <input type="text" class="form-control form-control" id="matric" name="matric" placeholder="Matric Number" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                                        Phone Number: <input type="text" class="form-control form-control" id="phone" name="phone" placeholder="Phone Number" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control" id="program" name="program" placeholder="Program" required>
+                                        Programme: <input type="text" class="form-control form-control" id="program" name="program" placeholder="Program" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control" id="fakulti" name="fakulti" placeholder="Fakulti" required>
+                                        Faculty: <input type="dropdown" id="fp" class="form-control form-control" class="dropdown" name="fakulti" placeholder="Fakulti" required>FP
+                                        <input type="radio" id="fpm" class="dropdown" name="fakulti" placeholder="Fakulti" required>FPM
+                                        <input type="radio" id="fppi" class="dropdown" name="fakulti" placeholder="Fakulti" required>FPPI
+                                        <input type="radio" id="fstm" class="dropdown" name="fakulti" placeholder="Fakulti" required>FSTM
+                                        <input type="radio" id="fps" class="dropdown" name="fakulti" placeholder="Fakulti" required>FSU
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control form-control" placeholder="Address" id="address" name="address" required></textarea>
+                                    Address: <textarea class="form-control form-control" placeholder="Address" id="address" name="address" required></textarea>
                                 </div>
 
 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control" id="password" name="password" placeholder="Password" required>
+                                        Password: <input type="password" class="form-control form-control" id="password" name="password" placeholder="Password" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control" id="repeatpassword" name="repeatpassword" placeholder="Repeat Password" required>
+                                        Repeat Password: <input type="password" class="form-control form-control" id="repeatpassword" name="repeatpassword" placeholder="Repeat Password" required>
                                     </div>
                                 </div>
-                                <input class="btn btn-primary btn btn-block" type="submit" name="btn_submit" value="Register Now">
+                                <input class="btn btn-primary btn btn-block" type="submit" name="btn_submit" value="Register">
                                 <hr>
 
                             </form>

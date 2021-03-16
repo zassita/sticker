@@ -2,8 +2,8 @@
 //checksession.php
 session_start();
 if (isset($_SESSION['sessionid']) &&
-	$_SESSION['accesslevel']=='admin'){
+	$_SESSION['email']=='email'){
 }else{
-	header ("Location: login.php?msg=Admin must login first");
+	header ("Location: loginadmin.php?msg=Admin must login first");
 }
 ?>
