@@ -49,7 +49,12 @@ if (isset($_GET['success'])) {
 <?php
 //filename : listing.php
 
-	$sql="SELECT matric_number, name FROM student_info";
+	$sql= "SELECT r.*,s.*,v.* FROM request_info AS r
+		JOIN student_info AS s
+		ON s.matric_number = r.matric_number
+		JOIN vehicle_info AS v
+		ON v.id = r.vehicle_id
+		WHERE r.status_id = 1";
 		  
 	//execute sql command
 	$result = mysqli_query($conn, $sql);

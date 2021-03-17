@@ -138,9 +138,39 @@ if (isset($_POST['btn_submit'])) {
             }
         }
     }
+    // file upload for file support letter
+    if (isset($_FILES['file_supportletter'])) {
+        if ($_FILES['file_supportletter']['type'] == "application/pdf") {
+            $source_file = $_FILES['file_supportletter']['tmp_name'];
+            $file_support_location = "../file/" . $matricno .'-'. $_FILES['file_supportletter']['name'];
+
+            if (file_exists($file_support_location)) {
+                print "The file name already exists!!";
+            } else {
+                move_uploaded_file($source_file, $file_support_location) or die("Error!!");
+                if ($_FILES['file_supportletter']['error'] == 0) {
+                    print "Pdf file uploaded successfully!";
+                    print "<b><u>Details : </u></b><br/>";
+                    print "File Name : " . $_FILES['file_supportletter']['name'] . "<br.>" . "<br/>";
+                    print "File Size : " . $_FILES['file_supportletter']['size'] . " bytes" . "<br/>";
+                    print "File location : file/" . $_FILES['file_supportletter']['name'] . "<br/>";
+                }
+            }
+        } else {
+            if ($_FILES['file_supportletter']['type'] != "application/pdf") {
+                if ($_FILES['file_licence']['error'] == 4) {
+                    header('Location: insertcar.php?error=nofile');
+                    exit();
+                }
+                print "Error occured while uploading file : " . $_FILES['file_supportletter']['name'] . "<br/>";
+                print "Invalid  file extension, should be pdf !!" . "<br/>";
+                print "Error Code : " . $_FILES['file_supportletter']['error'] . "<br/>";
+            }
+        }
+    }
     //sql command
-    $sql = "INSERT INTO vehicle_info(licence_class,matric_number,roadtax,vehicle_brand,color,cc_power,no_plat,licence_expired,file_matric,file_vehiclegrant,file_licence,file_permisionletter) 
-			VALUES ('$drivinglicenseclass','$matricno','$roadtaxenddate','$carbrand','$color','$cylinderpower','$vehicleregistrationno','$driverslicenseexpirationdate','$file_licence_location','$file_matric_location','$file_vehiclegrant_location','$file_permisionletter_location') ";
+    $sql = "INSERT INTO vehicle_info(licence_class,matric_number,roadtax,vehicle_brand,color,cc_power,no_plat,licence_expired,file_matric,file_vehiclegrant,file_licence,file_permisionletter,file_supportletter) 
+			VALUES ('$drivinglicenseclass','$matricno','$roadtaxenddate','$carbrand','$color','$cylinderpower','$vehicleregistrationno','$driverslicenseexpirationdate','$file_licence_location','$file_matric_location','$file_vehiclegrant_location','$file_permisionletter_location','$file_support_location') ";
 
     //execute sql
     $result = mysqli_query($conn, $sql);

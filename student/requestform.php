@@ -48,17 +48,18 @@ include("include/header.php");
                             <input type="text" class="form-control" id="address" name="address" placeholder="Your Address" value="<?php echo $_SESSION['address']; ?>" readonly>
                         </div>
                     </div>
-                     <div class="form-row">
-                        <div class="form-group col-md-12">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
                             <label for="finalyear">Final Year</label><br>
                             <input type="radio" class="" id="finalyear" name="final year" required>Yes
                             <input type="radio" class="" id="finalyear" name="final year" required>No
                         </div>
-                    </div>
-                    <div class="form-group col-md-4">
-                            <label for="file_reasonletter">Upload Reason Letter</label>
-                            <input type="file" class="form-control-file" id="file_reasonletter" name="file_reasonletter">
+                        <div class="form-group col-md-6">
+                            <label for="file_supportletter">Upload Reason Letter</label>
+                            <input type="file" class="form-control-file" id="file_supportletter" name="file_supportletter">
                         </div>
+                    </div>
+
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="licenseclass">Driving License Class</label>

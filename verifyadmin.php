@@ -9,6 +9,7 @@ $sql="SELECT id,email FROM admin
 	WHERE email='$email' 
 	AND password='$password'";
 echo "Mysql error:".mysqli_error($conn);
+$rs = mysqli_query($conn, $sql);
 if(mysqli_num_rows($rs)==1){//jumpa user
 	$record=mysqli_fetch_array($rs);
 	//session data

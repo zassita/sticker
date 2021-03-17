@@ -3,8 +3,16 @@
 include("../dbconnect.php");
 
 $matricno = $_SESSION['matric'];
+$sql = "SELECT r.*,s.*,v.*,sticker.* FROM request_info AS r
+		JOIN student_info AS s
+		ON s.matric_number = r.matric_number
+		JOIN vehicle_info AS v
+		ON v.id = r.vehicle_id
+        JOIN sticker_info AS sticker
+        ON sticker.matric_number = r.matric_number
+        WHERE s.matric_number = '$matricno'";
 // get student request list
-$getprevious = mysqli_query($conn, "SELECT * FROM request_info WHERE matric_number = '$matricno' ");
+$getprevious = mysqli_query($conn, $sql);
 // check for SQL error
 if (mysqli_error($conn)) {
     echo "Error : " . mysqli_error($conn);
@@ -54,6 +62,7 @@ if (isset($_GET['success'])) {
                     <thead>
                         <tr>
                             <th class="th-sm">Status</th>
+                            <th class="th-sm">Aproved date</th>
                             <th class="th-sm">Matric Number</th>
                             <th class="th-sm">Action</th>
                         </tr>
@@ -63,12 +72,11 @@ if (isset($_GET['success'])) {
                         <?php
                         while ($record = mysqli_fetch_array($getprevious)) {
                         ?>
-
-
                             <tr>
                                 <td><?= $record['status_id'] ?></td>
+                                <td><?php echo date("F jS, Y", strtotime($record['date_approved'])); ?></td>
                                 <td><?= $record['matric_number'] ?> </td>
-                                <td><?= $record['status_name'] ?></td>
+                                <td>View</td>
                             </tr>
                         <?php
                         }
