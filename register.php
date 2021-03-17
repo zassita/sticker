@@ -36,7 +36,7 @@ if (isset($_POST['btn_submit'])) {
         } else {
             // save user information in database
             $last_id = mysqli_insert_id($conn);
-            $saveuserdata = mysqli_query($conn,"INSERT INTO student_info (matric_number,user_id,address,phone,name,program,fakulti) VALUES ('$matric','$last_id','$address','$phone','$student_name','$program','$fakulti') ");
+            $saveuserdata = mysqli_query($conn, "INSERT INTO student_info (matric_number,user_id,address,phone,name,program,fakulti) VALUES ('$matric','$last_id','$address','$phone','$student_name','$program','$fakulti') ");
 
             if ($saveuserdata == false) {
                 echo "Failed to save user information <br>";
@@ -104,11 +104,14 @@ if (isset($_POST['btn_submit'])) {
                                         Programme: <input type="text" class="form-control form-control" id="program" name="program" placeholder="Program" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        Faculty: <input type="dropdown" id="fp" class="form-control form-control" class="dropdown" name="fakulti" placeholder="Fakulti" required>FP
-                                        <input type="radio" id="fpm" class="dropdown" name="fakulti" placeholder="Fakulti" required>FPM
-                                        <input type="radio" id="fppi" class="dropdown" name="fakulti" placeholder="Fakulti" required>FPPI
-                                        <input type="radio" id="fstm" class="dropdown" name="fakulti" placeholder="Fakulti" required>FSTM
-                                        <input type="radio" id="fps" class="dropdown" name="fakulti" placeholder="Fakulti" required>FSU
+                                            <label for="fakulti">Fakulti</label>
+                                            <select class="form-control" id="fakulti" name="fakulti">
+                                                <option value="fsu" >FSU</option>
+                                                <option value="fstm" >FSTM</option>
+                                                <option value="fp" >FP</option>
+                                                <option value="fpm" >FPM</option>
+                                                <option value="fppi" >FPPI</option>
+                                            </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
