@@ -21,27 +21,26 @@ USE `sticker`;
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` int(11) DEFAULT NULL,
-  `password` int(11) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
 -- Dumping structure for table sticker.request_info
 DROP TABLE IF EXISTS `request_info`;
 CREATE TABLE IF NOT EXISTS `request_info` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `request_id` int(11) NOT NULL AUTO_INCREMENT,
   `matric_number` int(11) DEFAULT NULL,
   `vehicle_id` int(11) DEFAULT NULL,
   `status_id` int(11) NOT NULL DEFAULT '1',
-  `request_remark` varchar(50) DEFAULT NULL,
+  `remark` varchar(50) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`request_id`),
   KEY `FK_request_info_student_info` (`matric_number`),
-  KEY `FK_request_info_vehicle_info` (`vehicle_id`),
-  KEY `status_id` (`status_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  KEY `FK_request_info_vehicle_info` (`vehicle_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
@@ -52,6 +51,19 @@ CREATE TABLE IF NOT EXISTS `status` (
   `status_name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+-- Data exporting was unselected.
+
+-- Dumping structure for table sticker.sticker_info
+DROP TABLE IF EXISTS `sticker_info`;
+CREATE TABLE IF NOT EXISTS `sticker_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `request_id` int(11) DEFAULT NULL,
+  `matric_number` varchar(50) DEFAULT NULL,
+  `date_approved` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `request_id` (`request_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
@@ -99,9 +111,10 @@ CREATE TABLE IF NOT EXISTS `vehicle_info` (
   `file_vehiclegrant` varchar(50) NOT NULL,
   `file_licence` varchar(50) NOT NULL,
   `file_permisionletter` varchar(50) DEFAULT NULL,
+  `file_supportletter` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `matric` (`matric_number`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
